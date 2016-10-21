@@ -1,0 +1,48 @@
+/* Avionics_imp
+ * Author: 
+ * Creation date: Sun Nov 23 2008
+ */
+IMPLEMENTATION
+        Avionics_imp
+REFINES
+        Avionics_ref
+
+SEES
+   SAFER_TYPE
+
+IMPORTS
+        (trans.BASIC_ARRAY_VAR) ( TRANS_AXIS , AXIS_VALUE ) ,
+        (thrusters.BASIC_ARRAY_VAR) ( 0 .. 3 , THRUSTERS )
+        /*power.BASIC_ARRAY_VAR(0..0,SWITCH) */
+
+
+INITIALISATION
+    power := OFF
+
+OPERATIONS
+    switch ( value ) =
+            BEGIN
+                (trans.STR_ARRAY) ( XX , ZERO ) ;
+                power := value
+                /*power.STR_ARRAY(0,OFF)*/
+        END ;
+
+    translation ( value ) =
+            BEGIN
+            (trans.STR_ARRAY) ( XX , value )
+            END ;
+
+    pp <-- get_power =
+            BEGIN
+                pp := power
+            END ;
+
+           move =
+                 BEGIN
+                   (thrusters.STR_ARRAY) ( 0 , B1 ) ;
+                   (thrusters.STR_ARRAY) ( 1 , B2 ) ;
+                   (thrusters.STR_ARRAY) ( 2 , B3 ) ;
+                   (thrusters.STR_ARRAY) ( 3 , B4 )
+                   END
+
+END

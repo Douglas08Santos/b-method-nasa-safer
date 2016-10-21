@@ -1,0 +1,27 @@
+THEORY BalanceX IS
+  BASIC_IO,0,0,0,0,0,0,0;
+  Initialisation,0,0,0,0,0,0,0;
+  INTERVAL_READ,0,0,0,0,0,0,0;
+  INT_WRITE,0,0,0,0,0,0,0;
+  BOOL_READ,0,0,0,0,0,0,0;
+  BOOL_WRITE,0,0,0,0,0,0,0;
+  CHAR_READ,0,0,0,0,0,0,0;
+  CHAR_WRITE,0,0,0,0,0,0,0;
+  STRING_WRITE,0,0,0,0,0,0,0
+END
+&
+THEORY ProofState
+END
+&
+THEORY MethodList
+END
+&
+THEORY PassList
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion(V3.8.3)(CLT == "V3.7.6")(genOPO == KO, local_op == OK)
+END

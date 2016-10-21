@@ -1,0 +1,61 @@
+/* Avionics_ref
+ * Author: 
+ * Creation date: Mon Nov 24 2008
+ */
+REFINEMENT
+   Avionics_ref
+REFINES
+   Avionics
+
+SEES
+   SAFER_TYPE
+
+ABSTRACT_VARIABLES
+   trans_cmd ,
+   thrusters_to_fire
+
+CONCRETE_VARIABLES
+   power
+
+INVARIANT
+   power : SWITCH &
+   power = power_switch
+
+INITIALISATION
+   power := OFF ;
+   trans_cmd := { XX |-> ZERO } ;
+   thrusters_to_fire := {}
+
+OPERATIONS
+
+        switch ( value ) =
+            PRE
+                 value : SWITCH
+            THEN
+                trans_cmd := { XX |-> ZERO } ;
+                    power := value
+            END ;
+
+    translation ( value ) =
+        PRE
+             value : AXIS_VALUE
+        THEN
+             trans_cmd := { XX |-> value }
+        END ;
+
+   pp <-- get_power =
+   BEGIN
+       pp := power
+   END ;
+
+   move =
+   BEGIN
+       IF ran ( trans_cmd ) = { POS }
+       THEN
+           thrusters_to_fire := { B1 , B2 , B3 , B4 }
+       ELSE
+           thrusters_to_fire := { F1 , F2 , F3 , F4 }
+       END
+   END
+
+END

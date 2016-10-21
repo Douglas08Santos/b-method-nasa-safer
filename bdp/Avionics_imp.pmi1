@@ -1,0 +1,57 @@
+THEORY BalanceX IS
+  Avionics_imp,10,0,0,7,0,0,0;
+  ValuesLemmas,0,0,0,0,0,0,0;
+  InstanciatedConstraintsLemmas,1,0,0,1,0,0,0;
+  Initialisation,1,0,0,0,0,0,0;
+  switch,2,0,0,1,0,0,0;
+  translation,2,0,0,1,0,0,0;
+  get_power,0,0,0,0,0,0,0;
+  move,4,0,0,4,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Unproved;
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  pr;
+  ?;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),(?;0);
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion(V3.8.3)(CLT == "V3.7.6")(genOPO == KO,local_op == OK);
+  PRVersion("V3.3.3.p39")(CLT == "V3.7.6")
+END

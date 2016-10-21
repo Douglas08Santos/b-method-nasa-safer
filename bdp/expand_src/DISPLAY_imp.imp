@@ -1,0 +1,23 @@
+/* DISPLAY_imp
+ * Author: 
+ * Creation date: Sun Nov 23 2008
+ */
+IMPLEMENTATION
+   DISPLAY_imp
+REFINES
+   DISPLAY
+
+IMPORTS
+    BASIC_IO
+
+OPERATIONS
+   display_menu =
+   BEGIN
+      STRING_WRITE ( "0 Quit" ) ;
+      STRING_WRITE ( "1 Switch ON\n" ) ;
+      STRING_WRITE ( "2 Switch OFF\n" ) ;
+      STRING_WRITE ( "3 Move Forward\n" ) ;
+      STRING_WRITE ( "4 Move Backward\n" )
+   END
+
+END

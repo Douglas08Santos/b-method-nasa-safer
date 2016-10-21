@@ -1,0 +1,15 @@
+digraph {
+Avionics_imp [ label=" Avionics\nAvionics_ref\nAvionics_imp " shape= box ]
+BASIC_ARRAY_VAR [ label=" BASIC_ARRAY_VAR " shape= box ]
+BASIC_IO [ label=" BASIC_IO " shape= box ]
+DISPLAY_imp [ label=" DISPLAY\nDISPLAY_imp " shape= box ]
+SAFER_TYPE [ label=" SAFER_TYPE " shape= box ]
+SAFER_imp [ label=" SAFER\nSAFER_imp " shape= box ]
+
+"Avionics_imp" -> "BASIC_ARRAY_VAR" []
+"Avionics_imp" -> "BASIC_ARRAY_VAR" []
+"DISPLAY_imp" -> "BASIC_IO" []
+"SAFER_imp" -> "BASIC_IO" []
+"SAFER_imp" -> "DISPLAY_imp" []
+"SAFER_imp" -> "Avionics_imp" []
+}

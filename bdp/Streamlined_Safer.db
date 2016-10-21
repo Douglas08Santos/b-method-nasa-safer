@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer/bdp/expand_src" old_decomp_dir="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer/bdp/src">
+        <!-- Definition directory list -->
+        <!-- Component file list -->
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="Avionics" suffix="mch" user="sylvain">
+            <component name="Avionics" type="specification" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="Avionics_imp" suffix="imp" user="sylvain">
+            <component name="Avionics_imp" type="implementation" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="Avionics_ref" suffix="ref" user="sylvain">
+            <component name="Avionics_ref" type="refinement" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="BASIC_ARRAY_VAR" suffix="mch" user="sylvain">
+            <component name="BASIC_ARRAY_VAR" type="specification" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="BASIC_IO" suffix="mch" user="sylvain">
+            <component name="BASIC_IO" type="specification" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="DISPLAY" suffix="mch" user="sylvain">
+            <component name="DISPLAY" type="specification" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="DISPLAY_imp" suffix="imp" user="sylvain">
+            <component name="DISPLAY_imp" type="implementation" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="SAFER" suffix="mch" user="sylvain">
+            <component name="SAFER" type="specification" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="SAFER_TYPE" suffix="mch" user="sylvain">
+            <component name="SAFER_TYPE" type="specification" />
+        </component_file>
+        <component_file path="/home/sylvain/HeriotWatt/dissertation/Code/Streamlined_Safer" name="SAFER_imp" suffix="imp" user="sylvain">
+            <component name="SAFER_imp" type="implementation" />
+        </component_file>
+    </project>
+</db_xml>

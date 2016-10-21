@@ -1,0 +1,23 @@
+THEORY ProofList IS
+  btrue & display_menu.5,(_f(1) => _f(6));
+  btrue & display_menu.4,(_f(1) => _f(5));
+  btrue & display_menu.3,(_f(1) => _f(4));
+  btrue & display_menu.2,(_f(1) => _f(3));
+  btrue & display_menu.1,(_f(1) => _f(2))
+END
+&
+THEORY Formulas IS
+  "`Check preconditions of called operation, or While loop construction, or Assert predicates'";
+  ("0 Quit": STRING);
+  ("1 Switch ON\n": STRING);
+  ("2 Switch OFF\n": STRING);
+  ("3 Move Forward\n": STRING);
+  ("4 Move Backward\n": STRING)
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion(V3.8.3)(CLT == "V3.7.6")(genOPO == KO, local_op == OK)
+END

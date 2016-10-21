@@ -1,0 +1,54 @@
+/* SAFER_imp
+ * Author: 
+ * Creation date: Sun Nov 23 2008
+ */
+IMPLEMENTATION
+   SAFER_imp
+REFINES
+   SAFER
+
+IMPORTS
+        BASIC_IO , DISPLAY , av.Avionics
+
+SEES
+   SAFER_TYPE
+
+CONCRETE_VARIABLES
+   power
+
+INVARIANT
+   power : SWITCH
+
+INITIALISATION
+   power := OFF
+
+OPERATIONS
+        main =
+                VAR Choice , counter IN
+                power := OFF ;
+                Choice := 1 ;
+                counter := MAXINT ;
+                WHILE ( ( Choice /= 0 ) & ( counter > 0 ) ) DO
+                        counter := counter - 1 ;
+                        display_menu ;
+                        Choice <-- INTERVAL_READ ( 0 , 4 ) ;
+                                IF Choice = 0 THEN skip
+                                END ;
+                                IF Choice = 1 THEN av.switch ( ON )
+                                END ;
+                                IF Choice = 2 THEN av.switch ( OFF )
+                                END ;
+                                IF Choice = 3 & power = ON THEN
+                                    av.translation ( POS ) ; av.move
+                                END ;
+                                IF Choice = 4 & power = ON THEN
+                                    av.translation ( NEG ) ; av.move
+                                END
+                        INVARIANT
+                                Choice : 0 .. 4 & counter : NAT
+                        VARIANT
+                                counter
+                END
+        END
+
+END
