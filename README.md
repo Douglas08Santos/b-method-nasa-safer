@@ -16,3 +16,4 @@ A key objective is to develop a deep understanding of how the B-method works, it
 * Dissertation: http://sylvainv.me/docs/nasa-safer-using-b-method.pdf
 * Wikipedia Page on the B-Method: https://en.wikipedia.org/wiki/B-Method
 * Different links about the B-method: http://formalmethods.wikia.com/wiki/B-Method
+* SAFER page: https://www.nasa.gov/missions/shuttle/f_saferspacewalk.html
